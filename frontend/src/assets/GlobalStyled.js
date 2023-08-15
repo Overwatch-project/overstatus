@@ -83,35 +83,15 @@ h5{
 	color: #FFFFFF;
 }
 *{
-	font-family: 'Poppins', sans-serif;
+	font-family: BigNoodle;
 	box-sizing: border-box;
 }
 p, h1, h2, h3, h4{
-    font-family: 'Poppins', sans-serif;
+    font-family: BigNoodle;
 	font-style: normal;
 	color: #000000;
 }
-h1{
-    font-weight: 200;
-    font-size: 64px;
-    line-height: 80px;
-}
-h2{
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 45px;
-}
-h5{
-	font-family: 'Geologica', sans-serif;
-	font-size: 60px;
-	color: #059B9A;
-}
-ul{ 
-	font-style: normal;
-	font-weight: 500;
-	font-size: 22px;
-	line-height: 28px;
-}
+
 `;
 
 export default GlobalStyle;
