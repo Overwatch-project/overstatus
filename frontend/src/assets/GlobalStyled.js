@@ -44,21 +44,6 @@ table {
 	border-spacing: 0;
 }
 //minhas
- /* @font-face {
-      font-family: 'BigNoodleTitling';
-      src: url(fonts/)format('woff');
-} */
-/* @font-face {
-    font-family: "BigNoodleOblique";
-    font-style: normal;
-    font-weight: oblique;
-    src: url(../src/assets/fonts/big_noodle_titling_oblique.woff)format("woff");
-}
-
-@font-face {
-    font-family: "Terminator";
-	src: url(../src/assets/fonts/Terminator_Genisys.ttf);
-} */
 *{
 	user-select: none;
 	box-sizing: border-box;
@@ -82,8 +67,13 @@ input:focus{
 }
 p {
 	font-family:'BigNoodle';
-	font-weight:normal;
+	font-weight: normal;
 	color: #000000;
+	font-size: 25px;
+}
+h1{
+	font-family:'BigNoodleOblique';
+	font-size: 40px;
 }
 
 `;

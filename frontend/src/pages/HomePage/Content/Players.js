@@ -7,7 +7,7 @@ export default function Players() {
     <>
       <ContentBox>
         <RoleDescription>
-          <p>JOGADORES</p>
+          <h1>JOGADORES</h1>
           <div></div>
         </RoleDescription>
         <NavInput placeholder={"Nome do jogaddor"} />
