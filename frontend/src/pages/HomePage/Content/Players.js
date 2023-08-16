@@ -10,7 +10,10 @@ export default function Players() {
           <h1>JOGADORES</h1>
           <div></div>
         </RoleDescription>
-        <NavInput placeholder={"Nome do jogaddor"} />
+        <SearchBox>
+          <NavInput placeholder={"Nome do jogaddor"} />
+          <IconSearch></IconSearch>
+        </SearchBox>
       </ContentBox>
     </>
   );
@@ -27,3 +30,5 @@ const RoleDescription = styled.div`
     background-color: #f99e1a;
   }
 `;
+const IconSearch = styled.div``;
+const SearchBox = styled.div``;

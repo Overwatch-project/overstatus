@@ -50,21 +50,16 @@ table {
 	font-family: 'BigNoodle';
 	font-weight: normal;
 }
-input{
+/* input{
 	width: 326px;
 	height: 58px;
-	background: #FFFFFF;
 	border-radius: 5px;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 23px;
 	margin-bottom: 13px;
-}
-input:focus{
-	box-shadow: 0 0 0 0;
-    outline: 0;
-}
+} */
 p {
 	font-family:'BigNoodle';
 	font-weight: normal;
