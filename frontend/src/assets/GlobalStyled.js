@@ -44,18 +44,32 @@ table {
 	border-spacing: 0;
 }
 //minhas
+ /* @font-face {
+      font-family: 'BigNoodleTitling';
+      src: url(fonts/)format('woff');
+} */
+/* @font-face {
+    font-family: "BigNoodleOblique";
+    font-style: normal;
+    font-weight: oblique;
+    src: url(../src/assets/fonts/big_noodle_titling_oblique.woff)format("woff");
+}
+
+@font-face {
+    font-family: "Terminator";
+	src: url(../src/assets/fonts/Terminator_Genisys.ttf);
+} */
 *{
 	user-select: none;
 	box-sizing: border-box;
-	font-family:'BigNoodleTitling';
-	font-weight:normal;
+	font-family: 'BigNoodle';
+	font-weight: normal;
 }
 input{
 	width: 326px;
 	height: 58px;
 	background: #FFFFFF;
 	border-radius: 5px;
-	font-family: 'Raleway';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
@@ -66,8 +80,8 @@ input:focus{
 	box-shadow: 0 0 0 0;
     outline: 0;
 }
-p, h1, h2, h3, h4{
-	font-family:'BigNoodleTitling';
+p {
+	font-family:'BigNoodle';
 	font-weight:normal;
 	color: #000000;
 }

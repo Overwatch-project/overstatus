@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import overstatus from "../../assets/overstatus.png"
 export function Logo() {
   return (
     <>
       <LogoBox>
-        <Img src={overstatus} alt="Overstatus Logo"/>
+        <Typography>Overstatus</Typography>
       </LogoBox>
     </>
   );
@@ -13,10 +12,12 @@ export function Logo() {
 const LogoBox = styled.div`
   display: flex;
   align-items: center;
+  color: #218FFE;
   justify-content: center;
   cursor: pointer;
 `;
-const Img = styled.img`
-  width: 200px;
-  height: 20px;
+const Typography = styled.p`
+  font-size: 20px;
+  color: #218FFE;
+  font-family: 'Terminator';
 `;

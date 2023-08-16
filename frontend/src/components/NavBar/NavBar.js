@@ -26,7 +26,7 @@ const TopBar = styled.div`
   width: 95vw;
   height: 70px;
   background-color: #ffffff;
-  font-family: BigNoodle;
+  font-family: 'BigNoodleTitling';
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
