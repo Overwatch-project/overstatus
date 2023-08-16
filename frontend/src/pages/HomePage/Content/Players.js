@@ -5,7 +5,7 @@ import { ContentBox } from "./styles";
 export default function Players() {
   return (
     <>
-      <ContentBox>
+      <ContentBox bgcolor='#9B9999'>
         <RoleDescription>
           <h1>JOGADORES</h1>
           <div></div>
@@ -31,4 +31,5 @@ const RoleDescription = styled.div`
   }
 `;
 const IconSearch = styled.div``;
-const SearchBox = styled.div``;
+const SearchBox = styled.div`
+`;

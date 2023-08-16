@@ -21,7 +21,7 @@ function App() {
 const Content = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #9B9999;
+  background-color: white;
   display: flex;
   justify-content: center;
   /* align-items: center; */
