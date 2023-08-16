@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import styled from "styled-components";
 
 export function NavInput({
@@ -11,7 +11,6 @@ export function NavInput({
   width,
   required,
   readOnly,
-  children
 }) {
   return (
     <>

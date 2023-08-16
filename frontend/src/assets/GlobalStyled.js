@@ -47,16 +47,8 @@ table {
 *{
 	user-select: none;
 	box-sizing: border-box;
-}
-div{
-	font-family: 'Raleway';
-}
-p{
-	font-family: 'Raleway';
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 23px;
-	color: #FFFFFF;
+	font-family:'BigNoodleTitling';
+	font-weight:normal;
 }
 input{
 	width: 326px;
@@ -74,21 +66,9 @@ input:focus{
 	box-shadow: 0 0 0 0;
     outline: 0;
 }
-h5{
-	font-family: 'Saira Stencil One';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 32px;
-	line-height: 50px;
-	color: #FFFFFF;
-}
-*{
-	font-family: BigNoodle;
-	box-sizing: border-box;
-}
 p, h1, h2, h3, h4{
-    font-family: BigNoodle;
-	font-style: normal;
+	font-family:'BigNoodleTitling';
+	font-weight:normal;
 	color: #000000;
 }
 

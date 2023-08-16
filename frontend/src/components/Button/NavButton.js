@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import styled from "styled-components";
 
 export function NavButton({ text, onClick, type, disabled, height, width }) {
