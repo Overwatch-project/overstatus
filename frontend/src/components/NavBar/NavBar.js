@@ -8,13 +8,13 @@ export default function NavBar() {
     <>
       <TopBar> 
         <Logo />
-        <NavButton text="MODO DE JOGO" width="auto" height="50%"/>
-        <NavButton text="HERÓIS" width="auto" height="50%"/>
-        <NavButton text="MAPAS" width="auto" height="50%"/>
-        <NavButton text="JOGADORES" width="auto" height="50%"/>
-        <NavButton text="GUIAS" width="auto" height="50%"/>
+        <NavButton text="MODO DE JOGO" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
+        <NavButton text="HERÓIS" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
+        <NavButton text="MAPAS" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
+        <NavButton text="JOGADORES" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
+        <NavButton text="GUIAS" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
         <NavInput />
-        <NavButton text="LOGIN" width="auto" height="50%" />
+        <NavButton text="LOGIN" width="auto" height="50%" bgcolor={'#F99E1A'}/>
       </TopBar>
     </>
   );

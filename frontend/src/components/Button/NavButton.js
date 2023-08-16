@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export function NavButton({ text, onClick, type, disabled, height, width }) {
+export function NavButton({ text, onClick, type, disabled, height, width, bgcolor }) {
   return (
     <>
       <ButtonBox
@@ -10,6 +10,7 @@ export function NavButton({ text, onClick, type, disabled, height, width }) {
         disabled={disabled}
         height={height}
         width={width}
+        bgcolor={bgcolor}
       >
         <h1>{text}</h1>
       </ButtonBox>
@@ -21,14 +22,14 @@ const ButtonBox = styled.div`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   border-radius: 10px;
-  background-color: #D9D9D9;
-  cursor: pointer;
+  background-color: ${(props) => props.bgcolor};
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1%;
+  cursor: pointer;
   &&:hover {
-    background-color: #337FFF;
+    background-color: rgba(0, 0, 0, 0.3);
   }
   h1 {
     color: #000000;
