@@ -10,14 +10,15 @@ export function Logo() {
 }
 
 const LogoBox = styled.div`
+width: auto;
+height: 100%;
   display: flex;
   align-items: center;
-  color: #218FFE;
   justify-content: center;
   cursor: pointer;
 `;
 const Typography = styled.p`
-  font-size: 20px;
+  font-size: 30px;
   color: #218FFE;
   font-family: 'Terminator';
 `;

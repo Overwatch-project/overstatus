@@ -11,7 +11,7 @@ export function NavButton({ text, onClick, type, disabled, height, width }) {
         height={height}
         width={width}
       >
-        <p>{text}</p>
+        <h1>{text}</h1>
       </ButtonBox>
     </>
   );
@@ -30,11 +30,9 @@ const ButtonBox = styled.div`
   &&:hover {
     background-color: #337FFF;
   }
-  p {
+  h1 {
     color: #000000;
-    font-family: BigNoodle;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 25px;
   }
 
 

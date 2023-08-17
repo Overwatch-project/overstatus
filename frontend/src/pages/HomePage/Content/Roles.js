@@ -17,7 +17,7 @@ export default function Roles() {
     <>
       <ContentBox>
         <RoleDescription onClick={apiResponse}>
-          <p>ROLES</p>
+          <h1>ROLES</h1>
           <div></div>
         </RoleDescription>
         <RoleIcon>
