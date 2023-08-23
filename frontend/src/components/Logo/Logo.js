@@ -3,22 +3,22 @@ export function Logo() {
   return (
     <>
       <LogoBox>
-        <Typography>Overstatus</Typography>
+        <Typography>overstatus</Typography>
       </LogoBox>
     </>
   );
 }
 
 const LogoBox = styled.div`
-width: auto;
-height: 100%;
+  width: auto;
+  height: auto;
   display: flex;
-  align-items: center;
   justify-content: center;
+  text-align: center;
   cursor: pointer;
 `;
 const Typography = styled.p`
   font-size: 30px;
-  color: #218FFE;
-  font-family: 'Terminator';
+  color: #218ffe;
+  font-family: "Terminator";
 `;

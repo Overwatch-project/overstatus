@@ -3,6 +3,7 @@ import GlobalStyle from "./assets/GlobalStyled";
 import { UserProvider } from "./context/useContext";
 import HomePage from "./pages/HomePage/HomePage";
 import styled from "styled-components";
+import SuportPage from "./pages/SuportPage/SuportPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <UserProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/suporte" element={<SuportPage />} />
         </Routes>
       </UserProvider>
       </Content>

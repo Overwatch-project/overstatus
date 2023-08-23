@@ -21,9 +21,8 @@ export const Description = styled.div`
   height: 100%;
   width: 200px;
   color: #ffffff;
-  background-color: green;
   div:nth-child(2) {
-    width: 70%;
+    width: 20%;
     height: 3px;
     background-color: #f99e1a;
   }

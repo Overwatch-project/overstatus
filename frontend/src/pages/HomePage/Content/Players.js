@@ -12,13 +12,11 @@ export default function Players() {
           <div></div>
         </Description>
         <SearchBox>
-          
             <NavInput placeholder={"Nome do jogaddor"} width={"100%"} />
               <IconSearch>
                 <div></div>
                 <IoSearchSharp />
               </IconSearch>
-          
         </SearchBox>
       </ContentBox>
     </>

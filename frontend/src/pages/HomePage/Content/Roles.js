@@ -38,7 +38,7 @@ export default function Roles() {
           <>
             <ThreeDots
               height="70%"
-              width="10%"
+              width="30%"
               radius="9"
               color="#EEEEEE"
               ariaLabel="three-dots-loading"
@@ -74,7 +74,6 @@ const RoleIcon = styled.div`
   height: 50%;
   width: 10%;
   cursor: pointer;
-
   p {
     color: #ffffff;
     position: absolute;
@@ -97,7 +96,8 @@ const RoleIcon = styled.div`
 `;
 const RoleMapBox = styled.div`
   display: flex;
+  align-items: center;
   width: 60%;
+  height: auto;
   justify-content: space-around;
-  background-color: red;
 `

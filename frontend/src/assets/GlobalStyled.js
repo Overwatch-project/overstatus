@@ -50,25 +50,15 @@ table {
 	font-family: 'BigNoodle';
 	font-weight: normal;
 }
-/* input{
-	width: 326px;
-	height: 58px;
-	border-radius: 5px;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 23px;
-	margin-bottom: 13px;
-} */
 p {
 	font-family:'BigNoodle';
 	font-weight: normal;
 	color: #000000;
-	font-size: 25px;
+	font-size: 20px;
 }
 h1{
 	font-family:'BigNoodleOblique';
-	font-size: 40px;
+	font-size: 35px;
 }
 
 `;
