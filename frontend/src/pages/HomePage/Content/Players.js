@@ -1,39 +1,31 @@
 import styled from "styled-components";
 import { NavInput } from "../../../components/Input/NavInput";
-import { ContentBox } from "./styles";
+import { ContentBox, Description } from "./styles";
 import { IoSearchSharp } from "react-icons/io5";
 
 export default function Players() {
   return (
     <>
       <ContentBox bgcolor="#9B9999">
-        <RoleDescription>
+        <Description>
           <h1>JOGADORES</h1>
           <div></div>
-        </RoleDescription>
+        </Description>
         <SearchBox>
-          <NavInput placeholder={"Nome do jogaddor"} width={"100%"} />
-          <IconSearch>
-            <div></div>
-            <IoSearchSharp />
-          </IconSearch>
+          
+            <NavInput placeholder={"Nome do jogaddor"} width={"100%"} />
+              <IconSearch>
+                <div></div>
+                <IoSearchSharp />
+              </IconSearch>
+          
         </SearchBox>
       </ContentBox>
     </>
   );
 }
 
-const RoleDescription = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff;
-  div:nth-child(2) {
-    width: 70%;
-    height: 3px;
-    background-color: #f99e1a;
-  }
-`;
+
 const IconSearch = styled.div`
   position: absolute;
   right: 0;
@@ -55,5 +47,5 @@ const SearchBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 63%;
+  width: 60%;
 `;

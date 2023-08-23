@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { ContentBox } from "./styles";
+import { ContentBox, Description } from "./styles";
 import { useEffect, useState } from "react";
 import React from "react";
 import { getRoles } from "../../../services/oversastApi/rolesService";
+import { ThreeDots } from "react-loader-spinner";
 
 export default function Roles() {
   const [roles, setRoles] = useState(undefined);
@@ -18,6 +19,7 @@ export default function Roles() {
   useEffect(() => {
     apiResponse();
   }, []);
+  console.log(roles);
   function RoleMap() {
     return (
       <>
@@ -34,7 +36,16 @@ export default function Roles() {
           </>
         ) : (
           <>
-            <p>Carregando...</p>
+            <ThreeDots
+              height="70%"
+              width="10%"
+              radius="9"
+              color="#EEEEEE"
+              ariaLabel="three-dots-loading"
+              wrapperStyle={{}}
+              wrapperClassName=""
+              visible={true}
+            />
           </>
         )}
       </>
@@ -43,29 +54,18 @@ export default function Roles() {
   return (
     <>
       <ContentBox bgcolor="#337fff">
-        <RoleDescription>
+        <Description>
           <h1>ROLES</h1>
           <div></div>
-        </RoleDescription>
-        <RoleMap />
+        </Description>
+        <RoleMapBox>
+          <RoleMap />
+        </RoleMapBox>
       </ContentBox>
     </>
   );
 }
 
-const RoleDescription = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: #ffffff;
-  div:nth-child(2) {
-    width: 70%;
-    height: 3px;
-    background-color: #f99e1a;
-  }
-`;
 const RoleIcon = styled.div`
   display: flex;
   flex-direction: column;
@@ -74,6 +74,7 @@ const RoleIcon = styled.div`
   height: 50%;
   width: 10%;
   cursor: pointer;
+
   p {
     color: #ffffff;
     position: absolute;
@@ -94,3 +95,9 @@ const RoleIcon = styled.div`
     }
   }
 `;
+const RoleMapBox = styled.div`
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  background-color: red;
+`
