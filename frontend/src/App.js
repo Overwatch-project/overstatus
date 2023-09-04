@@ -3,7 +3,7 @@ import GlobalStyle from "./assets/GlobalStyled";
 import { UserProvider } from "./context/useContext";
 import HomePage from "./pages/HomePage/HomePage";
 import styled from "styled-components";
-import SuportPage from "./pages/SuportPage/SuportPage";
+import SuportPage from "./pages/RolesPage/SuportPage/SuportPage";
 
 function App() {
   return (

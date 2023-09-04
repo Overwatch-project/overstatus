@@ -19,7 +19,6 @@ export default function Roles() {
   useEffect(() => {
     apiResponse();
   }, []);
-  console.log(roles);
   function RoleMap() {
     return (
       <>
