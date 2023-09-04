@@ -67,7 +67,6 @@ export default function Roles() {
 }
 
 const RoleIcon = styled.div`
-background-color: red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,6 +84,7 @@ background-color: red;
     width: 90px;
   }
   &&:hover {
+    
     img {
       width: 100px;
     }

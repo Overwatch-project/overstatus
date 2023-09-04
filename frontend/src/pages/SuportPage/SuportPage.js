@@ -1,6 +1,6 @@
 import NavBar from "../../components/NavBar/NavBar";
 import styled from "styled-components";
-import { HeroCard, HeroImage, HeroName, HeroesMap, TopBox } from "../style";
+import { HeroCard, HeroImage, HeroName, HeroesMap, TopBox, HeroCardWrapper } from "../style";
 
 export default function SuportPage() {
   return (
@@ -52,16 +52,7 @@ export default function SuportPage() {
 
 const Content = styled.div`
   margin-top: 110px;
-  background-color: green;
   width: 95vw;
   height: auto;
-`;
-
-const HeroCardWrapper = styled.div`
-  transition: transform 0.2s; 
-  &:hover {
-    transform: scale(
-      1.2
-    ); 
-  }
+  background-color: #337fff;
 `;
