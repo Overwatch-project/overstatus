@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./assets/GlobalStyled";
 import { UserProvider } from "./context/useContext";
 import HomePage from "./pages/HomePage/HomePage";
+import RolePage from './pages/RolesPage/RolePage'
 import styled from "styled-components";
-import SuportPage from "./pages/RolesPage/SuportPage/SuportPage";
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
       <UserProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/suporte" element={<SuportPage />} />
+          <Route path="/role/:idRole" element={<RolePage />} />
+          <Route path="/heroi/:keyHero" element={<HomePage />} />
         </Routes>
       </UserProvider>
       </Content>
@@ -22,7 +23,7 @@ function App() {
 }
 const Content = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: white;
   display: flex;
   justify-content: center;

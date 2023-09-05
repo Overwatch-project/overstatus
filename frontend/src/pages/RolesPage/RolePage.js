@@ -1,23 +1,32 @@
-import NavBar from "../../../components/NavBar/NavBar";
+import NavBar from "../../components/NavBar/NavBar";
 import styled from "styled-components";
 import {
   HeroCard,
   HeroImage,
   HeroName,
-  HeroesMap,
+  HeroesBox,
   TopBox,
   HeroCardWrapper,
-} from "../style";
-import { getHeroes } from "../../../services/oversastApi/heroesService";
+} from "./style";
+import { getHeroes } from "../../services/oversastApi/heroesService";
 import { useEffect, useState } from "react";
 import { ThreeDots } from "react-loader-spinner";
+import { Link, Navigate, useNavigate , useParams } from "react-router-dom";
+import { getRoles } from "../../services/oversastApi/rolesService";
 
 export default function SuportPage() {
   const [heroes, setHeroes] = useState(undefined);
+  const [roleName, setRoleName] = useState(undefined)
+  const navigate = useNavigate();
+  const { idRole } = useParams()
+  let name
+  let icon
   async function apiResponse() {
     try {
-      const string = "support"
-      const response = await getHeroes(string);
+      const response = await getHeroes(idRole);
+      const roleResponse = await getRoles()
+      const filterRole = roleResponse.filter(a => a.key === idRole)
+      setRoleName(filterRole[0].name)
       setHeroes(response);
     } catch (error) {
       setHeroes(error);
@@ -27,6 +36,9 @@ export default function SuportPage() {
   useEffect(() => {
     apiResponse();
   }, []);
+  function selectHero(key) {
+    navigate(`/heroi/${key}`);
+  }
   function HeroesSupMap() {
     return (
       <>
@@ -34,7 +46,7 @@ export default function SuportPage() {
           <>
             {heroes.map((a, index) => {
               return (
-                <HeroCardWrapper key={index}>
+                <HeroCardWrapper key={index} onClick={() => selectHero(a.key)}>
                   <HeroCard>
                     <HeroImage>
                       <img src={a.portrait} />
@@ -50,17 +62,17 @@ export default function SuportPage() {
           </>
         ) : (
           <>
-          <CentralizeDots>
-            <ThreeDots
-              height="70%"
-              width="30%"
-              radius="9"
-              color="#EEEEEE"
-              ariaLabel="three-dots-loading"
-              wrapperStyle={{}}
-              wrapperClassName=""
-              visible={true}
-            />
+            <CentralizeDots>
+              <ThreeDots
+                height="70%"
+                width="30%"
+                radius="9"
+                color="#EEEEEE"
+                ariaLabel="three-dots-loading"
+                wrapperStyle={{}}
+                wrapperClassName=""
+                visible={true}
+              />
             </CentralizeDots>
           </>
         )}
@@ -72,11 +84,11 @@ export default function SuportPage() {
       <NavBar />
       <Content>
         <TopBox>
-          <h1>Suportes</h1>
+          <h1>{roleName}</h1>
         </TopBox>
-        <HeroesMap>
+        <HeroesBox>
           <HeroesSupMap />
-        </HeroesMap>
+        </HeroesBox>
       </Content>
     </>
   );
@@ -85,13 +97,23 @@ export default function SuportPage() {
 const Content = styled.div`
   margin-top: 110px;
   width: 95vw;
-  height: auto;
+  height: 100%;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
   background-color: #337fff;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
 const CentralizeDots = styled.div`
-
-`
+  width: 95vw;
+  height: 100vh;
+  margin-bottom: 20px;
+  background-color: #337fff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;

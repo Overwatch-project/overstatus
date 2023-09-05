@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { getRoles } from "../../../services/oversastApi/rolesService";
 import { ThreeDots } from "react-loader-spinner";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 export default function Roles() {
   const [roles, setRoles] = useState(undefined);
+  const navigate = useNavigate();
   async function apiResponse() {
     try {
       const response = await getRoles();
@@ -19,6 +21,9 @@ export default function Roles() {
   useEffect(() => {
     apiResponse();
   }, []);
+  function selectRole(key){
+    navigate(`/role/${key}`);
+  }
   function RoleMap() {
     return (
       <>
@@ -26,7 +31,7 @@ export default function Roles() {
           <>
             {roles.map((a, index) => {
               return (
-                <RoleIcon key={index}>
+                <RoleIcon key={index} onClick={() => selectRole(a.key)}>
                   <p>{a.name}</p>
                   <img src={a.icon} alt={a.name} />
                 </RoleIcon>

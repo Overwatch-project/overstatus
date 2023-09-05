@@ -2,18 +2,22 @@ import styled from "styled-components";
 
 export const TopBox = styled.div`
   width: 100%;
-  height: 100px;
+  height: auto;
+  padding: 30px 0 50px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
-export const HeroesMap = styled.div`
-  width: 90%;
+export const HeroesBox = styled.div`
+  width: 85%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  &&:last-child{
+    justify-content: flex-start;
+  }
 `;
 export const HeroCardWrapper = styled.div`
   transition: transform 0.2s;
