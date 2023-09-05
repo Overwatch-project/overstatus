@@ -6,15 +6,14 @@ export const TopBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
 `;
 export const HeroesMap = styled.div`
-  width: 100%;
-  height: 500px;
+  width: 90%;
+  height: auto;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  align-items: center;
 `;
 export const HeroCardWrapper = styled.div`
   transition: transform 0.2s;
@@ -33,6 +32,7 @@ export const HeroCard = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin:10px;
 `;
 export const HeroImage = styled.div`
   display: flex;
