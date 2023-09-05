@@ -101,10 +101,12 @@ const Content = styled.div`
   padding-bottom: 30px;
   margin-bottom: 20px;
   background-color: #337fff;
-  border-radius: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
 `;
 
 const CentralizeDots = styled.div`

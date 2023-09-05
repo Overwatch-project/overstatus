@@ -2,22 +2,21 @@ import styled from "styled-components";
 import { Logo } from "../Logo/Logo";
 import { NavButton } from "../Button/NavButton";
 import { NavInput } from "../Input/NavInput";
+import { Link, Navigate, useNavigate , useParams } from "react-router-dom";
 
 export default function NavBar() {
-  function homePageNavigate(){
 
-  }
   return (
     <>
       <TopBar> 
-        <Logo onClick={homePageNavigate}/>
+        <Logo/>
         <NavButton text="MODO DE JOGO" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
         <NavButton text="HERÓIS" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
         <NavButton text="MAPAS" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
         <NavButton text="JOGADORES" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
         <NavButton text="GUIAS" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
         <NavInput />
-        <NavButton text="LOGIN" width="auto" height="50%" bgcolor={'#F99E1A'}/>
+        <NavButton text="LOGIN" width="9%" height="50%" bgcolor={'#F99E1A'}/>
       </TopBar>
     </>
   );
@@ -37,4 +36,17 @@ const TopBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+
+  @media (max-width: 950px) {
+    padding: 0 20px 0 150px;
+    height: 70px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    :nth-child(2){
+      h1{
+        width: 120px;
+      }
+    }
+  }
 `;

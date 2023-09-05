@@ -1,8 +1,14 @@
 import styled from "styled-components";
+import { Link, Navigate, useNavigate , useParams } from "react-router-dom";
+
 export function Logo() {
+  const navigate = useNavigate();
+  function homePageNavigate(){
+    navigate('/')
+  }
   return (
     <>
-      <LogoBox>
+      <LogoBox onClick={homePageNavigate}>
         <Typography>overstatus</Typography>
       </LogoBox>
     </>
@@ -11,7 +17,7 @@ export function Logo() {
 
 const LogoBox = styled.div`
   width: auto;
-  height: auto;
+  height: 60%;
   display: flex;
   justify-content: center;
   text-align: center;

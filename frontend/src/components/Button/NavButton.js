@@ -36,8 +36,10 @@ const ButtonBox = styled.div`
     font-size: 25px;
   }
 
-
-  @media (max-width: 770px) {
-    width: 100px;
+  @media (max-width: 950px) {
+    background-color: red;
+    margin: 0 10px 0 10px;
+    text-align: center;
+    /* overflow: hidden; */
   }
 `;
