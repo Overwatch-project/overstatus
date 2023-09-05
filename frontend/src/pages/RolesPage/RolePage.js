@@ -17,15 +17,15 @@ import { getRoles } from "../../services/oversastApi/rolesService";
 export default function SuportPage() {
   const [heroes, setHeroes] = useState(undefined);
   const [roleName, setRoleName] = useState(undefined)
+  const [icon, setIcon] = useState(undefined)
   const navigate = useNavigate();
   const { idRole } = useParams()
-  let name
-  let icon
   async function apiResponse() {
     try {
       const response = await getHeroes(idRole);
       const roleResponse = await getRoles()
       const filterRole = roleResponse.filter(a => a.key === idRole)
+      setIcon(filterRole[0].icon)
       setRoleName(filterRole[0].name)
       setHeroes(response);
     } catch (error) {
@@ -52,7 +52,7 @@ export default function SuportPage() {
                       <img src={a.portrait} />
                     </HeroImage>
                     <HeroName>
-                      <img src="https://blz-contentstack-images.akamaized.net/v3/assets/blt9c12f249ac15c7ec/blt66cec9a29cd34e3d/62ea8957c87999116c02c674/Support.svg" />
+                      <img src={icon} />
                       <p>{a.name}</p>
                     </HeroName>
                   </HeroCard>
