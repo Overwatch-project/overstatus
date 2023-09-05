@@ -37,9 +37,11 @@ const ButtonBox = styled.div`
   }
 
   @media (max-width: 950px) {
-    background-color: red;
-    margin: 0 10px 0 10px;
+    width: auto;
+    margin: 0 1vw 0 1vw;
     text-align: center;
-    /* overflow: hidden; */
+    h1{
+        width: 15vw;
+      }
   }
 `;
