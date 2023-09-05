@@ -4,10 +4,13 @@ import { NavButton } from "../Button/NavButton";
 import { NavInput } from "../Input/NavInput";
 
 export default function NavBar() {
+  function homePageNavigate(){
+
+  }
   return (
     <>
       <TopBar> 
-        <Logo />
+        <Logo onClick={homePageNavigate}/>
         <NavButton text="MODO DE JOGO" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
         <NavButton text="HERÓIS" width="auto" height="50%" bgcolor={'#D9D9D9'}/>
         <NavButton text="MAPAS" width="auto" height="50%" bgcolor={'#D9D9D9'}/>

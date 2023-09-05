@@ -39,7 +39,7 @@ export default function SuportPage() {
   function selectHero(key) {
     navigate(`/heroi/${key}`);
   }
-  function HeroesSupMap() {
+  function HeroesMap() {
     return (
       <>
         {heroes ? (
@@ -87,7 +87,7 @@ export default function SuportPage() {
           <h1>{roleName}</h1>
         </TopBox>
         <HeroesBox>
-          <HeroesSupMap />
+          <HeroesMap />
         </HeroesBox>
       </Content>
     </>
