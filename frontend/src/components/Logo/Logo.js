@@ -4,7 +4,8 @@ import { Link, Navigate, useNavigate , useParams } from "react-router-dom";
 export function Logo() {
   const navigate = useNavigate();
   function homePageNavigate(){
-    navigate('/')
+    navigate('/');
+    window.scrollTo(0, 0);
   }
   return (
     <>

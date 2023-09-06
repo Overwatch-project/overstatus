@@ -7,6 +7,10 @@ import {
   HeroesBox,
   TopBox,
   HeroCardWrapper,
+  CentralizeDots,
+  Content,
+  RoleIcon,
+  DescriptionBox
 } from "./style";
 import { getHeroes } from "../../services/oversastApi/heroesService";
 import { useEffect, useState } from "react";
@@ -17,6 +21,7 @@ import { getRoles } from "../../services/oversastApi/rolesService";
 export default function SuportPage() {
   const [heroes, setHeroes] = useState(undefined);
   const [roleName, setRoleName] = useState(undefined)
+  const [roleDescription, setRoleDescription] = useState(undefined)
   const [icon, setIcon] = useState(undefined)
   const navigate = useNavigate();
   const { idRole } = useParams()
@@ -27,6 +32,7 @@ export default function SuportPage() {
       const filterRole = roleResponse.filter(a => a.key === idRole)
       setIcon(filterRole[0].icon)
       setRoleName(filterRole[0].name)
+      setRoleDescription(filterRole[0].description)
       setHeroes(response);
     } catch (error) {
       setHeroes(error);
@@ -52,7 +58,9 @@ export default function SuportPage() {
                       <img src={a.portrait} />
                     </HeroImage>
                     <HeroName>
+                      <RoleIcon>
                       <img src={icon} />
+                      </RoleIcon>
                       <p>{a.name}</p>
                     </HeroName>
                   </HeroCard>
@@ -79,6 +87,7 @@ export default function SuportPage() {
       </>
     );
   }
+
   return (
     <>
       <NavBar />
@@ -86,6 +95,9 @@ export default function SuportPage() {
         <TopBox>
           <h1>{roleName}</h1>
         </TopBox>
+        <DescriptionBox>
+          <p>{roleDescription}</p>
+        </DescriptionBox>
         <HeroesBox>
           <HeroesMap />
         </HeroesBox>
@@ -93,29 +105,3 @@ export default function SuportPage() {
     </>
   );
 }
-
-const Content = styled.div`
-  margin-top: 110px;
-  width: 95vw;
-  height: 100%;
-  padding-bottom: 30px;
-  margin-bottom: 20px;
-  background-color: #337fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
-`;
-
-const CentralizeDots = styled.div`
-  width: 95vw;
-  height: 100vh;
-  margin-bottom: 20px;
-  background-color: #337fff;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;

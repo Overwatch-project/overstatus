@@ -7,6 +7,9 @@ export const TopBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  h1{
+    color: white;
+  }
 `;
 export const HeroesBox = styled.div`
   width: 85%;
@@ -15,7 +18,7 @@ export const HeroesBox = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-flow: row wrap;
-  &&:last-child{
+  &&:last-child {
     justify-content: flex-start;
   }
 `;
@@ -36,7 +39,7 @@ export const HeroCard = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin:10px;
+  margin: 10px;
 `;
 export const HeroImage = styled.div`
   display: flex;
@@ -54,8 +57,55 @@ export const HeroName = styled.div`
   p {
     margin: 10px;
   }
+`;
+export const Content = styled.div`
+  margin-top: 110px;
+  width: 95vw;
+  height: 100%;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  background-color: #337fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+`;
+export const CentralizeDots = styled.div`
+  width: 95vw;
+  height: 100vh;
+  margin-bottom: 20px;
+  background-color: #337fff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+export const RoleIcon = styled.div`
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: black;
+  padding: 3%;
+  border-radius: 50%;
   img {
     width: 20px;
     padding: 2px;
   }
 `;
+export const DescriptionBox = styled.div`
+  width: 85%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 25px;
+  p{
+    color: white;
+  }
+`
