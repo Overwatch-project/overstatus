@@ -56,11 +56,10 @@ p {
 	color: #000000;
 	font-size: 20px;
 }
-h1{
+h1, h2{
 	font-family:'BigNoodleOblique';
 	font-size: 35px;
 }
-
 `;
 
 export default GlobalStyle;
