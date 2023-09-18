@@ -4,6 +4,7 @@ import { UserProvider } from "./context/useContext";
 import HomePage from "./pages/HomePage/HomePage";
 import RolePage from './pages/RolesPage/RolePage'
 import styled from "styled-components";
+import HeroPage from "./pages/HeroPage/HeroPage";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/role/:idRole" element={<RolePage />} />
-          <Route path="/heroi/:keyHero" element={<HomePage />} />
+          <Route path="/heroi/:keyHero" element={<HeroPage />} />
         </Routes>
       </UserProvider>
       </Content>

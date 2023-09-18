@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ContentBox, Description } from "./styles";
 import { useEffect, useState } from "react";
 import React from "react";
-import { getRoles } from "../../../services/oversastApi/rolesService";
+import { getRoles } from "../../../services/overfastApi/rolesService";
 import { ThreeDots } from "react-loader-spinner";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 

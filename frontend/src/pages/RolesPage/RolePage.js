@@ -1,5 +1,4 @@
 import NavBar from "../../components/NavBar/NavBar";
-import styled from "styled-components";
 import {
   HeroCard,
   HeroImage,
@@ -12,11 +11,11 @@ import {
   RoleIcon,
   DescriptionBox
 } from "./style";
-import { getHeroes } from "../../services/oversastApi/heroesService";
+import { getHeroes } from "../../services/overfastApi/heroesService";
 import { useEffect, useState } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import { Link, Navigate, useNavigate , useParams } from "react-router-dom";
-import { getRoles } from "../../services/oversastApi/rolesService";
+import { getRoles } from "../../services/overfastApi/rolesService";
 
 export default function SuportPage() {
   const [heroes, setHeroes] = useState(undefined);
@@ -24,7 +23,7 @@ export default function SuportPage() {
   const [roleDescription, setRoleDescription] = useState(undefined)
   const [icon, setIcon] = useState(undefined)
   const navigate = useNavigate();
-  const { idRole } = useParams()
+  const { idRole } = useParams();
   async function apiResponse() {
     try {
       const response = await getHeroes(idRole);
