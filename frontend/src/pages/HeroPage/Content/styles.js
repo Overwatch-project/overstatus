@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContentBox = styled.div`
   width: 95vw;
-  height: 100%;
+  height: ${(props) => props.height};
   padding-bottom: 30px;
   margin-bottom: 20px;
   background-color:${(props) => props.bgcolor};

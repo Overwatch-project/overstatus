@@ -10,7 +10,7 @@ export default function Summary({ hero }) {
   console.log(hero);
   return (
     <>
-      <ContentBox bgcolor="#337fff">
+      <ContentBox bgcolor="#337fff" height="400px">
         <ItemBox>
           <Portrait>
             <h1>{hero.name}</h1>
