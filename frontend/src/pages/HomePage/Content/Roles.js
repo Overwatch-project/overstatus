@@ -5,6 +5,7 @@ import React from "react";
 import { getRoles } from "../../../services/overfastApi/rolesService";
 import { ThreeDots } from "react-loader-spinner";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import { theme } from "../../../assets/Colors";
 
 export default function Roles() {
   const [roles, setRoles] = useState(undefined);
@@ -57,7 +58,7 @@ export default function Roles() {
   }
   return (
     <>
-      <ContentBox bgcolor="#337fff">
+      <ContentBox bgcolor={theme.primary}>
         <Description>
           <h1>ROLES</h1>
           <div></div>
@@ -79,7 +80,7 @@ const RoleIcon = styled.div`
   width: 10%;
   cursor: pointer;
   p {
-    color: #ffffff;
+    color: ${theme.white};
     position: absolute;
     top: 190px;
     bottom: 1;

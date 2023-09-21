@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import RolePage from './pages/RolesPage/RolePage'
 import styled from "styled-components";
 import HeroPage from "./pages/HeroPage/HeroPage";
+import { theme } from "./assets/Colors";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
 const Content = styled.div`
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: ${theme.white};
   display: flex;
   justify-content: center;
   /* align-items: center; */

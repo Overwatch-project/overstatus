@@ -3,6 +3,8 @@ import { Logo } from "../Logo/Logo";
 import { NavButton } from "../Button/NavButton";
 import { NavInput } from "../Input/NavInput";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { theme } from "../../assets/Colors";
+
 
 export default function NavBar() {
   return (
@@ -41,12 +43,12 @@ const TopBar = styled.div`
   bottom: 0;
   width: 95vw;
   height: 70px;
-  background-color: #ffffff;
+  background-color: ${theme.white};
   z-index: 1;
   -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.45);
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;

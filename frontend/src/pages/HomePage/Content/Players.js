@@ -2,11 +2,13 @@ import styled from "styled-components";
 import { NavInput } from "../../../components/Input/NavInput";
 import { ContentBox, Description } from "./styles";
 import { IoSearchSharp } from "react-icons/io5";
+import { theme } from "../../../assets/Colors";
+
 
 export default function Players() {
   return (
     <>
-      <ContentBox bgcolor="#9B9999">
+      <ContentBox bgcolor={theme.secondary}>
         <Description>
           <h1>JOGADORES</h1>
           <div></div>

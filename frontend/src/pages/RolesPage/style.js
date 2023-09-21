@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../assets/Colors";
 
 export const TopBox = styled.div`
   width: 100%;
@@ -8,7 +9,7 @@ export const TopBox = styled.div`
   align-items: center;
   justify-content: center;
   h1{
-    color: white;
+    color: ${theme.white};
   }
 `;
 export const HeroesBox = styled.div`
@@ -30,11 +31,11 @@ export const HeroCardWrapper = styled.div`
   }
 `;
 export const HeroCard = styled.div`
-  background-color: #d9d9d9;
+  background-color: ${theme.gray};
   border-radius: 9px;
   border: 1px solid white;
-  width: 250px;
-  height: 300px;
+  width: 170px;
+  height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -50,12 +51,13 @@ export const HeroImage = styled.div`
   }
 `;
 export const HeroName = styled.div`
-  width: auto;
+  width: 75%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   p {
-    margin: 10px;
+    margin-right: 15px;
+    text-align: center;
   }
 `;
 export const Content = styled.div`
@@ -64,7 +66,7 @@ export const Content = styled.div`
   height: 100%;
   padding-bottom: 30px;
   margin-bottom: 20px;
-  background-color: #337fff;
+  background-color: ${theme.primary};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,6 +94,7 @@ export const RoleIcon = styled.div`
   background-color: black;
   padding: 3%;
   border-radius: 50%;
+  margin-left: 15px;
   img {
     width: 20px;
     padding: 2px;
@@ -106,6 +109,6 @@ export const DescriptionBox = styled.div`
   text-align: center;
   margin-bottom: 25px;
   p{
-    color: white;
+    color: ${theme.white};
   }
 `

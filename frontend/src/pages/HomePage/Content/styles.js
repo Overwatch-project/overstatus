@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../../assets/Colors";
 
 export const ContentBox = styled.div`
   width: 95vw;
@@ -20,10 +21,10 @@ export const Description = styled.div`
   align-items: center;
   height: 100%;
   width: 200px;
-  color: #ffffff;
+  color: ${theme.white};
   div:nth-child(2) {
     width: 20%;
     height: 3px;
-    background-color: #f99e1a;
+    background-color: ${theme.accent};
   }
 `;
