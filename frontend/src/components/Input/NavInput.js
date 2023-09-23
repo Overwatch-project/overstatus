@@ -42,26 +42,22 @@ const FormBox = styled.div`
     font-size: 1rem;
     font-weight: 500;
   }
-  @media (max-width: 770px) {
-    width: ${(props) => props.width};
-  }
+
+
 `;
 const InputBox = styled.input`
   width: auto;
   height: 38px;
   border-radius: 10px;
-  border: 2px solid;
+  border: none;
   padding: 4px 17px 0;
-  font-size: 18px;
-  font-family: "Poppins", sans-serif;
-  background-color: rgba(0, 0, 0, 0.05);
-  :focus {
-    border: 2px solid;
-    background-color: rgba(0, 0, 0, 0);
-    outline: none;
+  font-size: 20px;
+  background-color: rgba(217, 217, 217, 0.7);
+
+  &&:focus {
+    border: 0px solid;
+    box-shadow: 0 0 0 0;
+    outline: 0;
   }
 
-  @media (max-width: 770px) {
-    width: 100%;
-  }
 `;

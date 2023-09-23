@@ -1,56 +1,109 @@
 import styled from "styled-components";
-import { ContentBox } from "./styles";
-import { getRoles } from "@testing-library/react";
+import { ContentBox, Description } from "./styles";
+import { useEffect, useState } from "react";
+import React from "react";
+import { getRoles } from "../../../services/overfastApi/rolesService";
+import { ThreeDots } from "react-loader-spinner";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { theme } from "../../../assets/Colors";
 
 export default function Roles() {
-
-  async function apiResponse(){
-    try{
-      const response = await getRoles()
-      console.log(response)
-    }catch(error){
-      return console.log(error)
+  const [roles, setRoles] = useState(undefined);
+  const navigate = useNavigate();
+  async function apiResponse() {
+    try {
+      const response = await getRoles();
+      setRoles(response);
+    } catch (error) {
+      setRoles(error);
+      return;
     }
-   
+  }
+  useEffect(() => {
+    apiResponse();
+  }, []);
+  function selectRole(key){
+    navigate(`/role/${key}`);
+  }
+  function RoleMap() {
+    return (
+      <>
+        {roles ? (
+          <>
+            {roles.map((a, index) => {
+              return (
+                <RoleIcon key={index} onClick={() => selectRole(a.key)}>
+                  <p>{a.name}</p>
+                  <img src={a.icon} alt={a.name} />
+                </RoleIcon>
+              );
+            })}{" "}
+          </>
+        ) : (
+          <>
+            <ThreeDots
+              height="70%"
+              width="30%"
+              radius="9"
+              color="#EEEEEE"
+              ariaLabel="three-dots-loading"
+              wrapperStyle={{}}
+              wrapperClassName=""
+              visible={true}
+            />
+          </>
+        )}
+      </>
+    );
   }
   return (
     <>
-      <ContentBox>
-        <RoleDescription onClick={apiResponse}>
+      <ContentBox bgcolor={theme.primary}>
+        <Description>
           <h1>ROLES</h1>
           <div></div>
-        </RoleDescription>
-        <RoleIcon>
-          <p>TANQUE</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTayUAq1gY_U2MWsUJESrSFYt0k8AmrbhhE_bxXwLZ1R72HBg9Zsxro-HxqhN8uiODdY8s&usqp=CAU" alt="Tanque" />
-        </RoleIcon>
-        <RoleIcon>
-          <p>DANO</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTayUAq1gY_U2MWsUJESrSFYt0k8AmrbhhE_bxXwLZ1R72HBg9Zsxro-HxqhN8uiODdY8s&usqp=CAU" alt="Dano"/>
-        </RoleIcon>
-        <RoleIcon>
-          <p>SUPORTE</p>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTayUAq1gY_U2MWsUJESrSFYt0k8AmrbhhE_bxXwLZ1R72HBg9Zsxro-HxqhN8uiODdY8s&usqp=CAU" alt="Suporte"/>
-        </RoleIcon>
+        </Description>
+        <RoleMapBox>
+          <RoleMap />
+        </RoleMapBox>
       </ContentBox>
     </>
   );
 }
 
-const RoleDescription = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff;
-  div:nth-child(2){
-    width: 70%;
-    height: 3px;
-    background-color: #f99e1a;
-  }
-`;
-
 const RoleIcon = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 50%;
+  width: 10%;
+  cursor: pointer;
+  p {
+    color: ${theme.white};
+    position: absolute;
+    top: 190px;
+    bottom: 1;
+  }
+  img {
+    width: 90px;
+  }
+  &&:hover {
+    
+    img {
+      width: 100px;
+    }
+    p {
+      position: absolute;
+      top: 180px;
+      bottom: 1;
+    }
+  }
 `;
+const RoleMapBox = styled.div`
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: auto;
+  justify-content: space-around;
+`

@@ -50,32 +50,16 @@ table {
 	font-family: 'BigNoodle';
 	font-weight: normal;
 }
-input{
-	width: 326px;
-	height: 58px;
-	background: #FFFFFF;
-	border-radius: 5px;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 23px;
-	margin-bottom: 13px;
-}
-input:focus{
-	box-shadow: 0 0 0 0;
-    outline: 0;
-}
 p {
 	font-family:'BigNoodle';
 	font-weight: normal;
 	color: #000000;
-	font-size: 25px;
+	font-size: 20px;
 }
-h1{
+h1, h2{
 	font-family:'BigNoodleOblique';
-	font-size: 40px;
+	font-size: 35px;
 }
-
 `;
 
 export default GlobalStyle;
